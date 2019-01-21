@@ -1,0 +1,191 @@
+$main-font-family: 'Astloch';
+$main-font-size-value: 1;
+$main-font-size:$main-font-size-value * 1.5rem;
+$main-font-color: rgb(209, 166, 47);
+$main-block-width-value: 90;
+$main-block-width: $main-block-width-value * 1%;
+$max-width-value: 780;
+$max-width: $max-width-value * 1px;
+$main-background-color: rgb(0, 0, 0);
+$content-width-value: 100%;
+$content-width: $content-width-value;
+$img-max-width-value: 600px;
+$img-max-width: $img-max-width-value;
+
+@mixin center{
+	display: block;
+	margin: auto;
+	padding: 0;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+h1{
+	font-size: $main-font-size * 1.5;
+	text-align: center;
+	font-weight: bold;
+}
+
+h2{
+	font-size: $main-font-size * 1;
+	text-align: center;
+	font-weight: bold;
+}
+
+h2:nth-of-type(2n){
+	padding-top: 5%;
+}
+
+/*Interpolation*/
+$bg: background;
+
+#content, fieldset, form{
+	#{$bg}-color: lighten($main-background-color, 11%);
+	padding: 2%;
+	border: 2px solid rgb(209, 166, 47);
+	border-radius: 25px;
+}
+
+p{
+	text-align: center;
+	font-weight: bold;
+}
+
+html{
+	font-family: $main-font-family;
+    font-size: $main-font-size;
+    color: $main-font-color;
+}
+
+body{
+	width: $main-block-width;
+	background: $main-background-color;
+	@include center;
+	height: 100%;
+}
+
+@function img-url(){
+	@return '../data/';
+}
+
+img{
+	max-width: $img-max-width;
+}
+
+#gallery{
+	img{
+		max-width: 49%;
+    }
+}
+
+/*Gif background and positioning*/
+#gif {
+	width: 100px;
+	height: 150px;
+	position: fixed;
+	right: 0%;
+	top: 1%;
+	background-image: radial-gradient(rgba(160, 160, 160, 1) 15%,  rgba(120, 120, 120, 0) 85%);
+}
+
+/*Positioning of the gif (sadly scss has no working way for gifs like it has for imgs)*/
+#arokh_flying {
+	width: 100px;
+	position: fixed;
+	right: 0%;
+	top: 3%;
+}
+
+footer{
+	text-align: center;
+}
+
+/*The Menu*/
+#navbar{
+	position: relative;
+    background-image: url(img-url() + 'menu/drakan-symbol-new-gross.PNG');
+    width: 732px;
+    height: 819px;
+    @include center;
+}
+
+/*Overlay positions for the Menu-Crystals*/
+#middle-crystal{
+	position: absolute;
+	top: 32.5%;
+	left: 47.3%;
+}
+
+#top-crystal{
+	position: absolute;
+	top: 9.5%;
+	left: 48%;
+}
+
+#left-middle-crystal{
+	position: absolute;
+	top: 33.5%;
+	left: 18.5%;
+}
+
+#right-middle-crystal{
+	position: absolute;
+	top: 33.5%;
+	left: 77.5%;
+}
+
+#left-lower-crystal{
+	position: absolute;
+	top: 52.5%;
+	left: 28%;
+}
+
+#right-lower-crystal{
+	position: absolute;
+	top: 52.5%;
+	left: 70.5%;
+}
+
+#bottom-crystal{
+	position: absolute;
+	top: 78%;
+	left: 47.3%;
+}
+
+/*Crossfading of the crystals*/
+section {
+    position: relative;
+  }
+  
+  section img {
+      position: absolute;
+  }
+  
+  .top:hover {
+      animation-name: fade;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-duration: 0.2s;
+      animation-direction: alternate;
+  }
+  
+  @keyframes fade {
+      0% {
+          opacity: 1;
+      }
+      25% {
+          opacity: 1;
+      }
+      75% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 0;
+      }
+  }
+
+
+	
+  

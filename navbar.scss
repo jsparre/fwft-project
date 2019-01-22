@@ -1,0 +1,89 @@
+@import 'base';
+
+@function img-url(){
+	@return './data/';
+}
+
+/*The Menu*/
+#navbar{
+	position: relative;
+    background-image: url(img-url() + 'menu/drakan-symbol-new-gross.PNG');
+    width: 732px;
+    height: 819px;
+    @include center;
+}
+
+/*Overlay positions for the Menu-Crystals*/
+#middle-crystal{
+	position: absolute;
+	top: 32.5%;
+	left: 47.3%;
+}
+
+#top-crystal{
+	position: absolute;
+	top: 9.5%;
+	left: 48%;
+}
+
+#left-middle-crystal{
+	position: absolute;
+	top: 33.5%;
+	left: 18.5%;
+}
+
+#right-middle-crystal{
+	position: absolute;
+	top: 33.5%;
+	left: 77.5%;
+}
+
+#left-lower-crystal{
+	position: absolute;
+	top: 52.5%;
+	left: 28%;
+}
+
+#right-lower-crystal{
+	position: absolute;
+	top: 52.5%;
+	left: 70.5%;
+}
+
+#bottom-crystal{
+	position: absolute;
+	top: 78%;
+	left: 47.3%;
+}
+
+/*Crossfading of the crystals*/
+section {
+    position: relative;
+  }
+  
+  section img {
+      position: absolute;
+  }
+  
+  .top:hover {
+      animation-name: fade;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-duration: 0.2s;
+      animation-direction: alternate;
+  }
+  
+  @keyframes fade {
+      0% {
+          opacity: 1;
+      }
+      25% {
+          opacity: 1;
+      }
+      75% {
+          opacity: 0;
+      }
+      100% {
+          opacity: 0;
+      }
+  }

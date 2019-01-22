@@ -31,19 +31,27 @@ function init(){
 	function validate(){
 		console.log('inside validate');
 		
-		var regex=/[a-z]/;
+		var regex=/(([A-Z])[a-z]+)\-?/;
 		
 		if(lastName.value===''){
 			alert('Dont forget your last name!');
 			return false;
 		}
-		else if(!isNaN(lastName.value)){
-			alert('Names dont include numbers!');
-			return false;
-        }
+
+		/*Obsolet dank Regex */
+		// else if(!isNaN(lastName.value)){
+		// 	alert('Names dont include numbers!');
+		// 	return false;
+        // }
 		
 		/*Abgleich eines regex mit der Methode test()*/
 		else if(!regex.test(lastName.value)){
+			alert('That doesnt fit the regex!');
+			return false;
+		}
+
+		/*Abgleich eines regex mit der Methode test()*/
+		else if(!regex.test(firstName.value)){
 			alert('That doesnt fit the regex!');
 			return false;
 		}

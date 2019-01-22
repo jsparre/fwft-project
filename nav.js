@@ -4,7 +4,8 @@ window.onload = function navigation(){
     if (window.matchMedia("(min-width: 1200px)").matches) { // If media query matches
         console.log("The screen is at least 1200px big")
         document.getElementById('navi').innerHTML=`
-            <div id='navbar'><img src='./data/menu/drakan-symbol-new-gross.PNG' width: 732; height: 819;>
+            <div id='navbar'>
+                <img src='./data/menu/drakan-symbol-new-gross.PNG' width: 732; height: 819;>
                 <section id='top-crystal'>
                     <a href='./index.html'>
                         <img class='bottom' src='./data/menu/kristall1.png' >

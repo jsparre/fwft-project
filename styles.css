@@ -79,7 +79,7 @@ footer {
 /*The Menu*/
 #navbar {
   position: relative;
-  background-image: url("../data/menu/drakan-symbol-new-gross.PNG");
+  background-image: url("./data/menu/drakan-symbol-new-gross.PNG");
   width: 732px;
   height: 819px;
   display: block;

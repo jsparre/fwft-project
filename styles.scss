@@ -67,7 +67,7 @@ body{
 }
 
 @function img-url(){
-	@return '../data/';
+	@return './data/';
 }
 
 img{

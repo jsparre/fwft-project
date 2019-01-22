@@ -1,6 +1,6 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 /*hätte aber gern onresize*/ 
-window.onload = function navigation(){
+function navigation(){
     if (window.matchMedia("(min-width: 1200px)").matches) { // If media query matches
         console.log("The screen is at least 1200px big")
         document.getElementById('navi').innerHTML=`
@@ -63,3 +63,6 @@ window.onload = function navigation(){
         `;
     }
 }
+
+window.onload = navigation;
+window.onresize = navigation;

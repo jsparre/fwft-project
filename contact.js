@@ -82,7 +82,7 @@ function init(){
         newP.appendChild(newText);
     
         //4. Gefülltes Element in den DOM-Baum hängen
-        document.body.appendChild(newP);
+        document.getElementById("output").appendChild(newP);
     }
 	
 }

@@ -19,7 +19,7 @@ h2:nth-of-type(2n) {
 }
 
 /*Interpolation*/
-#content, fieldset, form {
+#content, fieldset, form, #output {
   background-color: #1c1c1c;
   padding: 2%;
   border: 2px solid #d1a62f;
@@ -161,5 +161,6 @@ section img {
     opacity: 0;
   }
 }
+/*Mediaquery*/
 
 /*# sourceMappingURL=styles.css.map */

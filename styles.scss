@@ -41,7 +41,7 @@ h2:nth-of-type(2n){
 /*Interpolation*/
 $bg: background;
 
-#content, fieldset, form{
+#content, fieldset, form, #output{
 	#{$bg}-color: lighten($main-background-color, 11%);
 	padding: 2%;
 	border: 2px solid rgb(209, 166, 47);
@@ -185,6 +185,8 @@ section {
           opacity: 0;
       }
   }
+
+/*Mediaquery*/
 
 
 	

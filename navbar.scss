@@ -8,7 +8,7 @@
 /*The Menu*/
 #navbar{
 	position: relative;
-    background-image: url(img-url() + 'menu/drakan-symbol-new-gross.PNG');
+    background-image: url(img-url() + 'menu/drakan-symbol-new-gross.png');
     width: 732px;
     height: 819px;
     @include center;
@@ -16,7 +16,7 @@
 
 /*Overlay positions for the Menu-Crystals*/
 #middle-crystal{
-	position: absolute;
+    position: absolute;
 	top: 32.5%;
 	left: 47.3%;
 }

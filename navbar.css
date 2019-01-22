@@ -1,3 +1,4 @@
+/*Navigation for desktop screens*/
 * {
   box-sizing: border-box;
 }
@@ -44,6 +45,32 @@ body {
   margin: auto;
   padding: 0;
   height: 100%;
+}
+
+img {
+  max-width: 600px;
+}
+
+/*Gif background and positioning*/
+#gif {
+  width: 100px;
+  height: 150px;
+  position: fixed;
+  right: 0%;
+  top: 1%;
+  background-image: radial-gradient(#a0a0a0 15%, rgba(120, 120, 120, 0) 85%);
+}
+
+/*Positioning of the gif (sadly scss has no working way for gifs like it has for imgs (background-img)*/
+#arokh_flying {
+  width: 100px;
+  position: fixed;
+  right: 0%;
+  top: 3%;
+}
+
+footer {
+  text-align: center;
 }
 
 /*The Menu*/
@@ -129,6 +156,51 @@ section img {
   }
   100% {
     opacity: 0;
+  }
+}
+@media screen and (max-width: 1199px) {
+  /*hide the inputs/checkmarks*/
+  #check01 {
+    display: none;
+  }
+
+  /*hide the submenu*/
+  ul.submenu {
+    max-height: 0;
+    overflow: hidden;
+    justify-content: space-between;
+    display: block;
+    margin: auto;
+    padding: 0;
+    max-width: 200px;
+  }
+
+  /*position the label*/
+  #menu-label {
+    font-size: 1.5rem;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding: 1% 0;
+  }
+
+  li a {
+    color: #d1a62f;
+    font-size: 1.5rem -5;
+  }
+
+  li {
+    border: 1px solid #d1a62f;
+    border-radius: 5px;
+    padding: 2% 0;
+    text-align: center;
+    list-style: none;
+    background-color: #333333;
+  }
+
+  /*show the submenu when checked*/
+  #check01:checked ~ ul.submenu {
+    max-height: 300px;
   }
 }
 

@@ -9,7 +9,7 @@ $max-width: $max-width-value * 1px;
 $main-background-color: rgb(0, 0, 0);
 $content-width-value: 100%;
 $content-width: $content-width-value;
-$img-max-width-value: 600px;
+$img-max-width-value: 100%;
 $img-max-width: $img-max-width-value;
 
 @mixin center{
@@ -42,7 +42,7 @@ h2:nth-of-type(2n){
 $bg: background;
 
 #content, fieldset, form, #output{
-	#{$bg}-color: lighten($main-background-color, 11%);
+	#{$bg}-color: lighten($main-background-color, 15%);
 	padding: 2%;
 	border: 2px solid rgb(209, 166, 47);
 	border-radius: 25px;
@@ -51,6 +51,11 @@ $bg: background;
 p{
 	text-align: center;
 	font-weight: bold;
+}
+
+p a{
+	color: $main-font-color;
+	text-decoration: underline;
 }
 
 html{
@@ -68,13 +73,25 @@ body{
 
 img{
 	max-width: $img-max-width;
+	@include center;
+}
+
+#gallery{
+	img{
+		max-width: 49%;
+		display:inline-block;
+	}
+}
+
+footer{
+	text-align: center;
 }
 
 /*Gif background and positioning*/
 #gif {
+	position: fixed;
 	width: 100px;
 	height: 150px;
-	position: fixed;
 	right: 0%;
 	top: 1%;
 	background-image: radial-gradient(rgba(160, 160, 160, 1) 15%,  rgba(120, 120, 120, 0) 85%);
@@ -82,14 +99,29 @@ img{
 
 /*Positioning of the gif (sadly scss has no working way for gifs like it has for imgs (background-img)*/
 #arokh_flying {
-	width: 100px;
 	position: fixed;
+	width: 100px;
 	right: 0%;
 	top: 3%;
 }
 
-footer{
-	text-align: center;
-}
+@media screen and (max-width: 1199px){
+    img{
+		width: 99%;
+	}
 
-/*Mediaquery*/
+	#gallery{
+		img{
+			padding: 4px;
+			max-width: 100%;
+		}
+	}
+
+	#gif {
+		visibility: hidden;
+	}
+
+	#arokh_flying {
+		visibility: hidden;
+	}
+}

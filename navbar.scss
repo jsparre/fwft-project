@@ -1,3 +1,4 @@
+/*Navigation for desktop screens*/
 @import 'base';
 
 @function img-url(){
@@ -59,31 +60,75 @@
 /*Crossfading of the crystals*/
 section {
     position: relative;
-  }
+}
   
-  section img {
-      position: absolute;
-  }
+section img {
+    position: absolute;
+}
   
-  .top:hover {
-      animation-name: fade;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: infinite;
-      animation-duration: 0.2s;
-      animation-direction: alternate;
-  }
+.top:hover {
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 0.2s;
+    animation-direction: alternate;
+}
   
-  @keyframes fade {
-      0% {
-          opacity: 1;
-      }
-      25% {
-          opacity: 1;
-      }
-      75% {
-          opacity: 0;
-      }
-      100% {
-          opacity: 0;
-      }
-  }
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1199px){
+    /*hide the inputs/checkmarks*/
+    #check01 {
+        display: none;
+    }
+    
+    /*hide the submenu*/
+    ul.submenu {
+        max-height: 0;
+        overflow: hidden;
+        justify-content: space-between;
+        @include center;
+        max-width: 200px;
+    }
+    
+    /*position the label*/
+    #menu-label {
+        font-size: $main-font-size;
+        position: relative;
+        display: block;
+        cursor: pointer;
+        padding: 1% 0;
+    }
+
+    li a{
+        color: $main-font-color;
+        font-size: $main-font-size -5;
+    }
+
+    li{
+        border: 1px solid rgb(209, 166, 47);
+        border-radius: 5px;
+        padding: 2% 0;
+        text-align: center;
+        list-style: none;
+        #{$bg}-color: lighten($main-background-color, 20%);
+    }
+    
+    /*show the submenu when checked*/
+    #check01:checked~ul.submenu {
+        max-height: 300px;
+    }
+}

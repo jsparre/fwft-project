@@ -211,18 +211,29 @@ section img {
     max-width: 200px;
   }
 
+  #menu-label:hover {
+    background-color: #666666;
+  }
+
   /*position the label*/
   #menu-label {
     font-size: 1.5rem;
     position: relative;
     display: block;
     cursor: pointer;
-    padding: 1% 0;
+    padding: 1% 1%;
+    background-color: #262626;
+    width: 100px;
+    transition: background-color 2s linear;
   }
 
   li a {
     color: #d1a62f;
     font-size: 1.5rem -5;
+  }
+
+  li:hover {
+    background-color: #666666;
   }
 
   li {
@@ -232,6 +243,7 @@ section img {
     text-align: center;
     list-style: none;
     background-color: #333333;
+    transition: background-color 2s linear;
   }
 
   /*show the submenu when checked*/

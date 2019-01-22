@@ -103,6 +103,10 @@ section img {
         @include center;
         max-width: 200px;
     }
+
+    #menu-label:hover{
+        #{$bg}-color: lighten($main-background-color, 40%);
+    }
     
     /*position the label*/
     #menu-label {
@@ -110,12 +114,20 @@ section img {
         position: relative;
         display: block;
         cursor: pointer;
-        padding: 1% 0;
+        padding: 1% 1%;
+        #{$bg}-color: lighten($main-background-color, 15%);
+        width: 100px;
+        transition: #{$bg}-color 2s linear;
+
     }
 
     li a{
         color: $main-font-color;
         font-size: $main-font-size -5;
+    }
+
+    li:hover{
+        #{$bg}-color: lighten($main-background-color, 40%);
     }
 
     li{
@@ -125,10 +137,13 @@ section img {
         text-align: center;
         list-style: none;
         #{$bg}-color: lighten($main-background-color, 20%);
+        transition: #{$bg}-color 2s linear;
     }
+
     
     /*show the submenu when checked*/
     #check01:checked~ul.submenu {
         max-height: 300px;
+        
     }
 }

@@ -59,6 +59,11 @@ img {
   padding: 0;
 }
 
+section {
+  width: 50px;
+  height: 50px;
+}
+
 #gallery img {
   max-width: 49%;
   display: inline-block;
@@ -88,7 +93,7 @@ footer {
 
 @media screen and (max-width: 1199px) {
   img {
-    width: 99%;
+    max-width: 99%;
   }
 
   #gallery img {
@@ -107,7 +112,7 @@ footer {
 /*The Menu*/
 #navbar {
   position: relative;
-  background-image: url("./data/menu/drakan-symbol-new-gross.PNG");
+  background-image: url("./data/menu/drakan-symbol-new-gross.png");
   width: 732px;
   height: 819px;
   display: block;

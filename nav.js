@@ -5,7 +5,6 @@ window.onload = function navigation(){
         console.log("The screen is at least 1200px big")
         document.getElementById('navi').innerHTML=`
             <div id='navbar'>
-                <img src='./data/menu/drakan-symbol-new-gross.PNG' width: 732; height: 819;>
                 <section id='top-crystal'>
                     <a href='./index.html'>
                         <img class='bottom' src='./data/menu/kristall1.png' >
